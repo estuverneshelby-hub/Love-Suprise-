@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+< lang="ht">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Yon ti sipriz ❤️</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            background:
+                radial-gradient(circle at top, #ffb6c9 0%, transparent 45%),
+                linear-gradient(135deg, #160b12, #3a1423, #12080d);
+
+            color: white;
+            padding: 20px;
+
+            overflow: hidden;
+        }
+
+        /* Ti limyè dekoratif */
+        .glow {
+            position: absolute;
+            width: 180px;
+            height: 180px;
+
+            background: rgba(255, 105, 140, 0.25);
+
+            border-radius: 50%;
+
+            filter: blur(60px);
+
+            animation: float 5s ease-in-out infinite;
+        }
+
+        .glow.one {
+            top: 10%;
+            left: -60px;
+        }
+
+        .glow.two {
+            bottom: 5%;
+            right: -60px;
+            animation-delay: 2s;
+        }
+
+        .card {
+            position: relative;
+
+            width: 100%;
+            max-width: 420px;
+
+            padding: 45px 28px;
+
+            text-align: center;
+
+            border-radius: 30px;
+
+            background: rgba(255, 255, 255, 0.10);
+
+            border: 1px solid rgba(255, 255, 255, 0.25);
+
+            backdrop-filter: blur(18px);
+
+            box-shadow:
+                0 25px 70px rgba(0, 0, 0, 0.45);
+
+            animation: appear 1s ease;
+        }
+
+        .heart {
+            font-size: 70px;
+
+            margin-bottom: 10px;
+
+            filter: drop-shadow(0 0 20px rgba(255, 80, 120, 0.8));
+
+            animation: heartbeat 1.4s infinite;
+        }
+
+        .small {
+            color: #ffc6d5;
+
+            font-size: 14px;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            margin: 10px 0;
+
+            font-size: 34px;
+
+            font-weight: 500;
+
+            color: #fff;
+        }
+
+        .line {
+            width: 55px;
+            height: 2px;
+
+            margin: 20px auto;
+
+            background: #ff8fab;
+
+            border-radius: 10px;
+        }
+
+        .question {
+            font-size: 20px;
+
+            line-height: 1.6;
+
+            color: #f8e9ee;
+
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 14px;
+        }
+
+        button {
+            border: none;
+
+            padding: 15px 30px;
+
+            border-radius: 50px;
+
+            font-size: 16px;
+
+            font-family: Arial, sans-serif;
+
+            transition: 0.3s;
+
+            cursor: pointer;
+        }
+
+        .yes {
+            color: white;
+
+            background: linear-gradient(
+                135deg,
+                #ff4f79,
+                #e91e63
+            );
+
+            box-shadow:
+                0 8px 25px rgba(233, 30, 99, 0.35);
+        }
+
+        .no {
+            color: #eee;
+
+            background: rgba(255, 255, 255, 0.12);
+
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        button:active {
+            transform: scale(0.94);
+        }
+
+        #message {
+            margin-top: 28px;
+
+            color: #ffd1dc;
+
+            font-size: 18px;
+
+            line-height: 1.7;
+
+            animation: fade 0.5s ease;
+        }
+
+        .signature {
+            margin-top: 25px;
+
+            color: #cfa8b4;
+
+            font-size: 13px;
+
+            font-style: italic;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            15% {
+                transform: scale(1.12);
+            }
+
+            30% {
+                transform: scale(1);
+            }
+
+            45% {
+                transform: scale(1.12);
+            }
+
+            60% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(30px) scale(0.96);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-25px);
+            }
+        }
+    </style>
+</head>
+
+<>
+
+    <div class="glow one"></div>
+    <div class="glow two"></div>
+
+    <div class="card">
+
+        <div class="heart">❤️</div>
+
+        <div class="small">
+            ti klerentah
+        </div>
+
+        <h1>Yon ti sipriz...</h1>
+
+        <div class="line"></div>
+
+        <div class="question">
+            Mwen gen yon ti kesyon
+            pou mwen poze w... 🥰
+            <br><br>
+
+            <strong>
+                eske sa pa deranje sim ta fè yon promenade dimanch ?
+            </strong>
+        </div>
+
+        <div class="buttons">
+
+            <button class="yes" onclick="reponnWi()">
+                WI ❤️
+            </button>
+
+            <button class="no" onclick="reponnNon()">
+                NON 😅
+            </button>
+
+        </div>
+
+        <div id="message"></div>
+
+        <div class="signature">
+            sorcière de meh ❤️
+        </div>
+
+    </div>
+
+    <script>
+    function reponnWi() {
+
+        document.getElementById("message").innerHTML =
+            "😍 Mwen te espere repons sa a... ❤️<br>" +
+            "Mwen pa ka tann pou n pase yon bèl moman ansanm. 🥰";
+
+        petatifis();
+    }
+
+    function reponnNon() {
+
+        document.getElementById("message").innerHTML =
+            "😅 Pran yon ti tan pou w reflechi ankò... ❤️";
+
+    }
+
+    function petatifis() {
+
+        for (let i = 0; i < 80; i++) {
+
+            const p = document.createElement("div");
+
+            p.innerHTML = ["❤️", "💖", "✨", "🎉", "💕"][
+                Math.floor(Math.random() * 5)
+            ];
+
+            p.style.position = "fixed";
+            p.style.left = Math.random() * 100 + "vw";
+            p.style.top = "-30px";
+            p.style.fontSize = (15 + Math.random() * 20) + "px";
+            p.style.zIndex = "9999";
+            p.style.pointerEvents = "none";
+
+            document.body.appendChild(p);
+
+            const duration = 1500 + Math.random() * 2000;
+
+            p.animate(
+                [
+                    {
+                        transform: "translateY(0) rotate(0deg)",
+                        opacity: 1
+                    },
+                    {
+                        transform: "translateY(110vh) rotate(720deg)",
+                        opacity: 0
+                    }
+                ],
+                {
+                    duration: duration,
+                    easing: "ease-out"
+                }
+            );
+
+            setTimeout(function () {
+                p.remove();
+            }, duration);
+        }
+    }
+</script>
